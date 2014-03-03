@@ -14,6 +14,9 @@
 
 @implementation ViewController
 
+int numOKs;
+int numKOs;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,4 +29,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pushToCrash:(id)sender {
+    
+    //Crash!!!
+    NSArray *myTest;
+    myTest = [NSArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yellow", nil];
+    
+    @try {
+        _result.text = [NSString stringWithFormat:@"Crash %@", myTest[5]];
+    }
+    @catch (NSException *exception) {
+        _result.text = [NSString stringWithFormat:@"Crash %d", ++numKOs];
+    }
+}
+
+- (IBAction)pushToSucceed:(id)sender {
+    
+    _result.text = [NSString stringWithFormat:@"Push OK %d", ++numOKs];
+}
 @end

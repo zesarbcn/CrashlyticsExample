@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *result;
+
+- (IBAction)pushToCrash:(id)sender;
+
+- (IBAction)pushToSucceed:(id)sender;
+
 @end
