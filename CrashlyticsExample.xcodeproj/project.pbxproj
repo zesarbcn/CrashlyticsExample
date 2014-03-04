@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49422F9318C666CF0025FF06 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49422F9218C666CF0025FF06 /* Crashlytics.framework */; };
 		499F05EB18C5391400FAC842 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F05EA18C5391400FAC842 /* Foundation.framework */; };
 		499F05ED18C5391400FAC842 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F05EC18C5391400FAC842 /* CoreGraphics.framework */; };
 		499F05EF18C5391400FAC842 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F05EE18C5391400FAC842 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49422F9218C666CF0025FF06 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		499F05E718C5391400FAC842 /* CrashlyticsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashlyticsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499F05EA18C5391400FAC842 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		499F05EC18C5391400FAC842 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			files = (
 				499F05ED18C5391400FAC842 /* CoreGraphics.framework in Frameworks */,
 				499F05EF18C5391400FAC842 /* UIKit.framework in Frameworks */,
+				49422F9318C666CF0025FF06 /* Crashlytics.framework in Frameworks */,
 				499F05EB18C5391400FAC842 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		499F05E918C5391400FAC842 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49422F9218C666CF0025FF06 /* Crashlytics.framework */,
 				499F05EA18C5391400FAC842 /* Foundation.framework */,
 				499F05EC18C5391400FAC842 /* CoreGraphics.framework */,
 				499F05EE18C5391400FAC842 /* UIKit.framework */,
@@ -162,6 +166,7 @@
 				499F05E318C5391400FAC842 /* Sources */,
 				499F05E418C5391400FAC842 /* Frameworks */,
 				499F05E518C5391400FAC842 /* Resources */,
+				49422F9118C666220025FF06 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,6 +248,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49422F9118C666220025FF06 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run xxxxxxxx";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		499F05E318C5391400FAC842 /* Sources */ = {
@@ -378,6 +399,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/MACTrix/Documents/XCode\\ Projects/CrashlyticsExample",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrashlyticsExample/CrashlyticsExample-Prefix.pch";
 				INFOPLIST_FILE = "CrashlyticsExample/CrashlyticsExample-Info.plist";
@@ -391,6 +416,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/MACTrix/Documents/XCode\\ Projects/CrashlyticsExample",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrashlyticsExample/CrashlyticsExample-Prefix.pch";
 				INFOPLIST_FILE = "CrashlyticsExample/CrashlyticsExample-Info.plist";
@@ -460,6 +489,7 @@
 				499F061B18C5391500FAC842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		499F061C18C5391500FAC842 /* Build configuration list for PBXNativeTarget "CrashlyticsExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +498,7 @@
 				499F061E18C5391500FAC842 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
