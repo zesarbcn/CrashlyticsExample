@@ -35,12 +35,12 @@ int numKOs;
     NSArray *myTest;
     myTest = [NSArray arrayWithObjects: @"Red", @"Green", @"Blue", @"Yellow", nil];
     
-    @try {
+    //@try {
         _result.text = [NSString stringWithFormat:@"Crash %@", myTest[5]];
-    }
-    @catch (NSException *exception) {
-        _result.text = [NSString stringWithFormat:@"Crash %d", ++numKOs];
-    }
+    //}
+    //@catch (NSException *exception) {
+    //    _result.text = [NSString stringWithFormat:@"Crash %d", ++numKOs];
+    //}
 }
 
 - (IBAction)pushToSucceed:(id)sender {
